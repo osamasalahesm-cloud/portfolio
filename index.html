@@ -8,36 +8,88 @@
 :root{
   --bg:#0b0f19; --card:#121829; --muted:#94a3b8; --text:#e2e8f0; --accent:#22c55e; --accent-2:#60a5fa;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;color:var(--text);background:radial-gradient(1200px 600px at 10% -10%,#1a2444 0%,#0b0f19 50%,#080b13 100%);min-height:100svh;display:grid;place-items:center;padding:24px}
-.card{width:min(900px,96vw);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.45);overflow:hidden}
-header{display:flex;gap:20px;align-items:center;padding:24px 24px 0}
-.avatar{width:84px;height:84px;border-radius:18px;background:#0b1224;border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;font-size:26px;font-weight:800;color:#a5b4fc}
-.id{flex:1}
-.name{font-size:clamp(22px,3.6vw,34px);font-weight:800;letter-spacing:.3px;margin:0}
-.role{margin:.25rem 0 0;color:var(--muted)}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+  color:var(--text);
+  background:radial-gradient(1200px 600px at 10% -10%,#1a2444 0%,#0b0f19 50%,#080b13 100%);
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+.card{
+  width:min(900px,96vw);
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+  overflow:hidden;
+}
+header{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  padding:24px 24px 0;
+  flex-wrap:wrap;
+}
+[dir="rtl"] header{ flex-direction: row-reverse; }
+.avatar{
+  width:84px;height:84px;
+  border-radius:18px;
+  background:#0b1224;
+  border:1px solid rgba(255,255,255,.1);
+  display:grid;
+  place-items:center;
+  font-size:26px;font-weight:800;color:#a5b4fc;
+}
+.id{flex:1; min-width:200px;}
+.name{font-size:clamp(22px,3.6vw,34px);font-weight:800;letter-spacing:.3px;margin:0;word-break:break-word;}
+.role{margin:.25rem 0 0;color:var(--muted);word-break:break-word;}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
 .badge{border:1px solid rgba(255,255,255,.12);padding:.35rem .6rem;border-radius:999px;font-size:.85rem;}
-.content{display:grid;grid-template-columns:1.2fr .9fr;gap:22px;padding:24px}
-.panel{background:rgba(13,20,39,.7);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
-h2{font-size:1.1rem;margin:0 0 .6rem;color:#cbd5e1}
-p{line-height:1.55}
-ul{margin:.4rem 0 0 1.1rem}
-.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-.select, .link, button{appearance:none;border:1px solid rgba(255,255,255,.12);background:#0d1427;color:var(--text);padding:.6rem .8rem;border-radius:12px;font-weight:600;cursor:pointer}
-.select{padding:.55rem .75rem}
-button:hover,.link:hover{border-color:rgba(255,255,255,.2)}
-.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.contact a{color:var(--accent-2);text-decoration:none;font-weight:700}
-.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.primary{background:linear-gradient(90deg,var(--accent) 0%, #16a34a 100%);color:#041204;border:none}
-.secondary{background:linear-gradient(90deg,var(--accent-2) 0%, #3b82f6 100%); color:#041204;border:none}
-.qr{display:grid;place-items:center;padding:18px;background:rgba(0,0,0,.2);border-radius:14px}
-.qr img{width:180px;height:180px}
-.muted{color:var(--muted);font-size:.92rem}
-footer{padding:0 24px 20px;color:var(--muted);font-size:.85rem}
+.content{display:grid;grid-template-columns:1.2fr .9fr;gap:22px;padding:24px;}
+.panel{background:rgba(13,20,39,.7);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;}
+h2{font-size:1.1rem;margin:0 0 .6rem;color:#cbd5e1;}
+p, li{line-height:1.55; word-break:break-word; font-size:clamp(0.85rem,2.5vw,1rem);}
+ul{margin:.4rem 0 0 1.1rem;}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+.select, .link, button{
+  appearance:none;
+  border:1px solid rgba(255,255,255,.12);
+  background:#0d1427;
+  color:var(--text);
+  padding:.6rem .8rem;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+}
+.select{padding:.55rem .75rem;}
+button:hover,.link:hover{border-color:rgba(255,255,255,.2);}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.contact a{color:var(--accent-2);text-decoration:none;font-weight:700;}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
+.primary{background:linear-gradient(90deg,var(--accent) 0%, #16a34a 100%);color:#041204;border:none;}
+.secondary{background:linear-gradient(90deg,var(--accent-2) 0%, #3b82f6 100%); color:#041204;border:none;}
+.qr{display:grid;place-items:center;padding:18px;background:rgba(0,0,0,.2);border-radius:14px;}
+.qr img{width:180px;height:180px;}
+.muted{color:var(--muted);font-size:.92rem;}
+footer{padding:0 24px 20px;color:var(--muted);font-size:.85rem;}
 @media (max-width:800px){
-  .content{grid-template-columns:1fr}
+  .content{grid-template-columns:1fr;}
+}
+@media (max-width:500px){
+  .content{gap:16px;padding:16px;}
+  .card{border-radius:16px;padding:16px;}
+  .name{font-size:clamp(20px,6vw,28px);}
+  .avatar{width:64px;height:64px;font-size:22px;}
+  .qr img{width:140px;height:140px;}
+}
+@media (max-width:400px){
+  .controls{flex-direction:column;align-items:stretch;}
+  .select, button{width:100%;}
 }
 </style>
 </head>
@@ -56,11 +108,11 @@ footer{padding:0 24px 20px;color:var(--muted);font-size:.85rem}
     </div>
     <div class="controls">
       <select class="select" id="langSelect" title="Change the language">
-  <option value="" disabled selected>Change the language</option>
-  <option value="en">English</option>
-  <option value="ar">العربية</option>
-  <option value="ru">Русский</option>
-</select>
+        <option value="" disabled selected>Change the language</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ru">Русский</option>
+      </select>
     </div>
   </header>
   <section class="content">
@@ -111,42 +163,9 @@ const CONTENT = {
   email:'osama@example.com',
   phone:'+20 123 456 789',
   site:'https://your-portfolio-link.example',
-  en:{
-    role:'Translator & Interpreter (AR · EN · RU)',
-    specials:['Business & Legal','Technical Docs','Consecutive & Remote'],
-    about_title:'About',
-    about_text:'I help companies and individuals communicate clearly across Arabic, English, and Russian. I specialize in business, legal, and technical content, offering accurate translation and smooth interpreting for meetings and events.',
-    services_title:'Services',
-    services_list:['Translation (business, legal, technical)','Consecutive & remote interpreting','Website & app localization','Subtitles & transcripts'],
-    contact_title:'Contact',
-    share_title:'Share',
-    share_text:'Scan to open this card on your phone, or share it with a client.',
-    footer:'All rights reserved.'
-  },
-  ar:{
-    role:'مترجم ومُفسِّر (عربي · إنجليزي · روسي)',
-    specials:['أعمال وقانون','وثائق تقنية','ترجمة فورية وعن بُعد'],
-    about_title:'نبذة',
-    about_text:'أساعد الشركات والأفراد على التواصل بوضوح بين العربية والإنجليزية والروسية. أمتلك خبرة في مجالات الأعمال والقانون والتقنية، وأقدّم ترجمة دقيقة وتفسيرًا سلسًا للاجتماعات والفعاليات.',
-    services_title:'الخدمات',
-    services_list:['ترجمة (أعمال، قانون، تقني)','تفسير تتابعي وعن بُعد','توطين المواقع والتطبيقات','ترجمة字幕 ونسخ نصي'],
-    contact_title:'التواصل',
-    share_title:'مشاركة',
-    share_text:'امسح الرمز لفتح البطاقة على هاتفك أو لمشاركتها مع عميل.',
-    footer:'جميع الحقوق محفوظة.'
-  },
-  ru:{
-    role:'Переводчик и устный переводчик (AR · EN · RU)',
-    specials:['Бизнес и право','Технические документы','Последовательный и удалённый'],
-    about_title:'Обо мне',
-    about_text:'Помогаю компаниям и частным лицам эффективно общаться на арабском, английском и русском языках. Специализируюсь на бизнесе, юридических и технических текстах, обеспечиваю точный перевод и комфортный устный перевод на встречах и мероприятиях.',
-    services_title:'Услуги',
-    services_list:['Письменный перевод (бизнес, право, техника)','Последовательный и удалённый устный перевод','Локализация сайтов и приложений','Субтитры и транскрибация'],
-    contact_title:'Контакты',
-    share_title:'Поделиться',
-    share_text:'Сканируйте код, чтобы открыть эту карточку на телефоне, или поделитесь с клиентом.',
-    footer:'Все права защищены.'
-  }
+  en:{role:'Translator & Interpreter (AR · EN · RU)',specials:['Business & Legal','Technical Docs','Consecutive & Remote'],about_title:'About',about_text:'I help companies and individuals communicate clearly across Arabic, English, and Russian. I specialize in business, legal, and technical content, offering accurate translation and smooth interpreting for meetings and events.',services_title:'Services',services_list:['Translation (business, legal, technical)','Consecutive & remote interpreting','Website & app localization','Subtitles & transcripts'],contact_title:'Contact',share_title:'Share',share_text:'Scan to open this card on your phone, or share it with a client.',footer:'All rights reserved.'},
+  ar:{role:'مترجم ومُفسِّر (عربي · إنجليزي · روسي)',specials:['أعمال وقانون','وثائق تقنية','ترجمة فورية وعن بُعد'],about_title:'نبذة',about_text:'أساعد الشركات والأفراد على التواصل بوضوح بين العربية والإنجليزية والروسية. أمتلك خبرة في مجالات الأعمال والقانون والتقنية، وأقدّم ترجمة دقيقة وتفسيرًا سلسًا للاجتماعات والفعاليات.',services_title:'الخدمات',services_list:['ترجمة (أعمال، قانون، تقني)','تفسير تتابعي وعن بُعد','توطين المواقع والتطبيقات','ترجمة字幕 ونسخ نصي'],contact_title:'التواصل',share_title:'مشاركة',share_text:'امسح الرمز لفتح البطاقة على هاتفك أو لمشاركتها مع عميل.',footer:'جميع الحقوق محفوظة.'},
+  ru:{role:'Переводчик и устный переводчик (AR · EN · RU)',specials:['Бизнес и право','Технические документы','Последовательный и удалённый'],about_title:'Обо мне',about_text:'Помогаю компаниям и частным лицам эффективно общаться на арабском, английском и русском языках. Специализируюсь на бизнесе, юридических и технических текстах, обеспечиваю точный перевод и комфортный устный перевод на встречах и мероприятиях.',services_title:'Услуги',services_list:['Письменный перевод (бизнес, право, техника)','Последовательный и удалённый устный перевод','Локализация сайтов и приложений','Субтитры и транскрибация'],contact_title:'Контакты',share_title:'Поделиться',share_text:'Сканируйте код, чтобы открыть эту карточку на телефоне, или поделитесь с клиентом.',footer:'Все права защищены.'}
 };
 
 const $ = sel => document.querySelector(sel);
@@ -154,6 +173,7 @@ const setText = (id, text) => { const el = $(id); if(el) el.textContent = text }
 const setHTML = (id, html) => { const el = $(id); if(el) el.innerHTML = html };
 
 function applyLang(lang){
+  if(!lang) return;
   const L = CONTENT[lang] || CONTENT.en;
   document.documentElement.lang = lang;
   document.documentElement.dir = lang==='ar'?'rtl':'ltr';
