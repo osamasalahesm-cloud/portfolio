@@ -1,161 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Osama Salah — Translator & Interpreter</title>
-  <meta name="description" content="Portfolio of Osama Salah — Translator & Interpreter" />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-2: #22c55e;
-      --ring: rgba(56, 189, 248, 0.35);
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(1200px 800px at 20% -10%, #0b1220 0%, var(--bg) 60%),
-                  radial-gradient(1000px 700px at 120% 10%, #0b2a20 0%, var(--bg) 60%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .wrap { max-width: 880px; margin: 48px auto; padding: 0 20px; }
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      border: 1px solid rgba(148,163,184,.15);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      backdrop-filter: blur(6px);
-    }
-    header {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 16px;
-      align-items: center;
-      border-bottom: 1px dashed rgba(148,163,184,.25);
-      padding-bottom: 18px;
-      margin-bottom: 18px;
-    }
-    h1 { font-size: 28px; margin: 0; letter-spacing: .2px; }
-    .subtitle { color: var(--muted); margin-top: 4px; font-size: 15px; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 8px 12px; border-radius: 999px;
-      background: rgba(56,189,248,.1);
-      color: var(--accent);
-      border: 1px solid rgba(56,189,248,.25);
-      font-size: 13px; font-weight: 600;
-    }
-    section { margin: 22px 0; }
-    h2 { font-size: 18px; margin: 0 0 8px 0; letter-spacing: .3px; }
-    p { margin: 0; color: #d1d5db; }
-    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    @media (min-width: 720px) { .grid { grid-template-columns: 2fr 1.3fr; } }
-    .panel {
-      border: 1px solid rgba(148,163,184,.15);
-      border-radius: 16px; padding: 18px;
-      background: rgba(2,6,23,.5);
-    }
-    .list { list-style: none; padding: 0; margin: 0; }
-    .list li { padding: 8px 0; border-bottom: 1px dashed rgba(148,163,184,.18); }
-    .list li:last-child { border-bottom: none; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .muted { color: var(--muted); font-size: 14px; }
-    .qr-box { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; }
-    .qr { width: 120px; height: 120px; border-radius: 12px;
-      background: conic-gradient(from 0deg, rgba(56,189,248,.2), rgba(34,197,94,.2));
-      display: grid; place-items: center; border: 1px solid rgba(148,163,184,.25);
-    }
-    .qr img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
-    .cta {
-      display: inline-block; margin-top: 12px; padding: 10px 14px; border-radius: 12px;
-      border: 1px solid rgba(34,197,94,.35);
-      color: #dcfce7; background: rgba(34,197,94,.12);
-      text-decoration: none; font-weight: 600;
-      box-shadow: 0 4px 16px rgba(34,197,94,.15);
-    }
-    .cta:hover { text-decoration: none; filter: brightness(1.08); }
-    footer { margin-top: 22px; text-align: center; color: var(--muted); font-size: 13px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Osama Salah — Multilingual QR Business Card</title>
+<style>
+:root{
+  --bg:#0b0f19; --card:#121829; --muted:#94a3b8; --text:#e2e8f0; --accent:#22c55e; --accent-2:#60a5fa;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;color:var(--text);background:radial-gradient(1200px 600px at 10% -10%,#1a2444 0%,#0b0f19 50%,#080b13 100%);min-height:100svh;display:grid;place-items:center;padding:24px}
+.card{width:min(900px,96vw);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.45);overflow:hidden}
+header{display:flex;gap:20px;align-items:center;padding:24px 24px 0}
+.avatar{width:84px;height:84px;border-radius:18px;background:#0b1224;border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;font-size:26px;font-weight:800;color:#a5b4fc}
+.id{flex:1}
+.name{font-size:clamp(22px,3.6vw,34px);font-weight:800;letter-spacing:.3px;margin:0}
+.role{margin:.25rem 0 0;color:var(--muted)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.badge{border:1px solid rgba(255,255,255,.12);padding:.35rem .6rem;border-radius:999px;font-size:.85rem;}
+.content{display:grid;grid-template-columns:1.2fr .9fr;gap:22px;padding:24px}
+.panel{background:rgba(13,20,39,.7);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
+h2{font-size:1.1rem;margin:0 0 .6rem;color:#cbd5e1}
+p{line-height:1.55}
+ul{margin:.4rem 0 0 1.1rem}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.select, .link, button{appearance:none;border:1px solid rgba(255,255,255,.12);background:#0d1427;color:var(--text);padding:.6rem .8rem;border-radius:12px;font-weight:600;cursor:pointer}
+.select{padding:.55rem .75rem}
+button:hover,.link:hover{border-color:rgba(255,255,255,.2)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.contact a{color:var(--accent-2);text-decoration:none;font-weight:700}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.primary{background:linear-gradient(90deg,var(--accent) 0%, #16a34a 100%);color:#041204;border:none}
+.secondary{background:linear-gradient(90deg,var(--accent-2) 0%, #3b82f6 100%); color:#041204;border:none}
+.qr{display:grid;place-items:center;padding:18px;background:rgba(0,0,0,.2);border-radius:14px}
+.qr img{width:180px;height:180px}
+.muted{color:var(--muted);font-size:.92rem}
+footer{padding:0 24px 20px;color:var(--muted);font-size:.85rem}
+@media (max-width:800px){
+  .content{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="card">
-      <header>
-        <div>
-          <h1>Osama Salah</h1>
-          <div class="subtitle">Translator & Interpreter · Graduate of the Faculty of Al‑Alsun</div>
-        </div>
-        <span class="badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.3"/></svg>
-          Available for projects
-        </span>
-      </header>
-
-      <div class="grid">
-        <section class="panel">
-          <h2>About Me</h2>
-          <p>
-            Multilingual Translator & Interpreter fluent in Russian, Arabic, and English, with expertise in technical, legal, and nuclear translation.
-            Experienced in simultaneous and consecutive interpretation for high-level meetings, conferences, and international exhibitions.
-            Skilled in handling complex technical documentation with precision, cultural accuracy, and attention to detail.
-            Bachelor’s degree in Russian Language & Literature (Honors) from Ain Shams University — Faculty of Al-Alsun.
-            Certified in OSHA Safety, Digital Marketing, and advanced language training.
-            Recognized in national and international Russian language competitions.
-          </p>
-        </section>
-
-        <section class="panel">
-          <h2>Contact</h2>
-          <ul class="list">
-            <li>Email: <a href="mailto:usama1salah1@gmail.com">usama1salah1@gmail.com</a></li>
-            <li>Phone: <a href="tel:+201007519383">+20 100 751 9383</a></li>
-          </ul>
-        </section>
+<div class="card" id="cardRoot">
+  <header>
+    <div class="avatar" aria-hidden="true">OS</div>
+    <div class="id">
+      <h1 class="name" id="t_name">Osama Salah</h1>
+      <p class="role" id="t_role">Translator & Interpreter (AR · EN · RU)</p>
+      <div class="badges">
+        <span class="badge" id="t_special1">Business & Legal</span>
+        <span class="badge" id="t_special2">Technical Docs</span>
+        <span class="badge" id="t_special3">Consecutive & Remote</span>
       </div>
-
-      <div class="grid" style="margin-top: 6px;">
-        <section class="panel">
-          <h2>Social Links</h2>
-          <ul class="list">
-            <li><a href="#" target="_blank">LinkedIn</a></li>
-            <li><a href="#" target="_blank">GitHub</a></li>
-            <li><a href="#" target="_blank">Portfolio</a></li>
-          </ul>
-          <p class="muted">Replace the <code>#</code> with your real links.</p>
-        </section>
-
-        <section class="panel">
-          <h2>Scan to View Certificates</h2>
-          <div class="qr-box">
-            <div class="qr">
-              <img src="certificates-qr.png" alt="QR code to view certificates" />
-            </div>
-            <div>
-              <p>Point your camera at the QR code to view my certificates and credentials.</p>
-              <a class="cta" href="#" target="_blank">Open Certificates</a>
-              <p class="muted">Tip: host your PDF or folder, then link it here.</p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <footer>
-        © <span id="year"></span> Osama Salah — All rights reserved.
-      </footer>
     </div>
-  </main>
+    <div class="controls">
+      <select class="select" id="langSelect" title="Change the language">
+  <option value="" disabled selected>Change the language</option>
+  <option value="en">English</option>
+  <option value="ar">العربية</option>
+  <option value="ru">Русский</option>
+</select>
+    </div>
+  </header>
+  <section class="content">
+    <div class="panel">
+      <h2 id="t_about_title">About</h2>
+      <p id="t_about_text">I help companies and individuals communicate clearly across Arabic, English, and Russian. I specialize in business, legal, and technical content, offering accurate translation and smooth interpreting for meetings and events.</p>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+      <h2 id="t_services_title" style="margin-top:12px">Services</h2>
+      <ul id="t_services_list">
+        <li>Translation (business, legal, technical)</li>
+        <li>Consecutive & remote interpreting</li>
+        <li>Website & app localization</li>
+        <li>Subtitles & transcripts</li>
+      </ul>
+
+      <div class="contact" style="margin-top:12px">
+        <div class="row muted" id="t_contact_title">Contact</div>
+        <div class="row">
+          <span>📧</span><a id="t_email" href="mailto:osama@example.com">osama@example.com</a>
+        </div>
+        <div class="row">
+          <span>☎️</span><a id="t_phone" href="tel:+20123456789">+20 123 456 789</a>
+        </div>
+        <div class="row">
+          <span>🌐</span><a id="t_site" href="#" target="_blank">Portfolio</a>
+        </div>
+        <div class="cta">
+          <button class="primary" id="btnVcf">Download vCard</button>
+          <a class="link" id="btnEmail" href="mailto:osama@example.com">Email me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 id="t_share_title">Share</h2>
+      <p class="muted" id="t_share_text">Scan to open this card on your phone, or share it with a client.</p>
+      <div class="qr"><img id="qrImg" alt="QR code" /></div>
+      <p class="muted" style="margin-top:10px">Tip: Add this page to your phone home screen.</p>
+    </div>
+  </section>
+
+  <footer id="t_footer">© <span id="year"></span> Osama Salah. All rights reserved.</footer>
+</div>
+
+<script>
+const CONTENT = {
+  name:'Osama Salah',
+  email:'osama@example.com',
+  phone:'+20 123 456 789',
+  site:'https://your-portfolio-link.example',
+  en:{
+    role:'Translator & Interpreter (AR · EN · RU)',
+    specials:['Business & Legal','Technical Docs','Consecutive & Remote'],
+    about_title:'About',
+    about_text:'I help companies and individuals communicate clearly across Arabic, English, and Russian. I specialize in business, legal, and technical content, offering accurate translation and smooth interpreting for meetings and events.',
+    services_title:'Services',
+    services_list:['Translation (business, legal, technical)','Consecutive & remote interpreting','Website & app localization','Subtitles & transcripts'],
+    contact_title:'Contact',
+    share_title:'Share',
+    share_text:'Scan to open this card on your phone, or share it with a client.',
+    footer:'All rights reserved.'
+  },
+  ar:{
+    role:'مترجم ومُفسِّر (عربي · إنجليزي · روسي)',
+    specials:['أعمال وقانون','وثائق تقنية','ترجمة فورية وعن بُعد'],
+    about_title:'نبذة',
+    about_text:'أساعد الشركات والأفراد على التواصل بوضوح بين العربية والإنجليزية والروسية. أمتلك خبرة في مجالات الأعمال والقانون والتقنية، وأقدّم ترجمة دقيقة وتفسيرًا سلسًا للاجتماعات والفعاليات.',
+    services_title:'الخدمات',
+    services_list:['ترجمة (أعمال، قانون، تقني)','تفسير تتابعي وعن بُعد','توطين المواقع والتطبيقات','ترجمة字幕 ونسخ نصي'],
+    contact_title:'التواصل',
+    share_title:'مشاركة',
+    share_text:'امسح الرمز لفتح البطاقة على هاتفك أو لمشاركتها مع عميل.',
+    footer:'جميع الحقوق محفوظة.'
+  },
+  ru:{
+    role:'Переводчик и устный переводчик (AR · EN · RU)',
+    specials:['Бизнес и право','Технические документы','Последовательный и удалённый'],
+    about_title:'Обо мне',
+    about_text:'Помогаю компаниям и частным лицам эффективно общаться на арабском, английском и русском языках. Специализируюсь на бизнесе, юридических и технических текстах, обеспечиваю точный перевод и комфортный устный перевод на встречах и мероприятиях.',
+    services_title:'Услуги',
+    services_list:['Письменный перевод (бизнес, право, техника)','Последовательный и удалённый устный перевод','Локализация сайтов и приложений','Субтитры и транскрибация'],
+    contact_title:'Контакты',
+    share_title:'Поделиться',
+    share_text:'Сканируйте код, чтобы открыть эту карточку на телефоне, или поделитесь с клиентом.',
+    footer:'Все права защищены.'
+  }
+};
+
+const $ = sel => document.querySelector(sel);
+const setText = (id, text) => { const el = $(id); if(el) el.textContent = text };
+const setHTML = (id, html) => { const el = $(id); if(el) el.innerHTML = html };
+
+function applyLang(lang){
+  const L = CONTENT[lang] || CONTENT.en;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang==='ar'?'rtl':'ltr';
+  setText('#t_name', CONTENT.name);
+  setText('#t_role', L.role);
+  setText('#t_special1', L.specials[0]);
+  setText('#t_special2', L.specials[1]);
+  setText('#t_special3', L.specials[2]);
+  setText('#t_about_title', L.about_title);
+  setText('#t_services_title', L.services_title);
+  setText('#t_contact_title', L.contact_title);
+  setText('#t_share_title', L.share_title);
+  setText('#t_about_text', L.about_text);
+  setHTML('#t_services_list', L.services_list.map(x=>`<li>${x}</li>`).join(''));
+  $('#t_email').textContent = CONTENT.email; $('#t_email').href=`mailto:${CONTENT.email}`;
+  $('#t_phone').textContent = CONTENT.phone; $('#t_phone').href=`tel:${CONTENT.phone.replace(/\s+/g,'')}`;
+  $('#t_site').textContent = CONTENT.site.replace(/^https?:\/\//,''); $('#t_site').href=CONTENT.site;
+  setHTML('#t_share_text', L.share_text);
+  setHTML('#t_footer', `© <span id="year"></span> ${CONTENT.name}. ${L.footer}`);
+  $('#year').textContent = new Date().getFullYear();
+  $('#btnEmail').textContent = lang==='ar'?'راسلني':lang==='ru'?'Написать':'Email me';
+  $('#btnVcf').textContent = lang==='ar'?'تحميل بطاقة الاتصال':lang==='ru'?'Скачать vCard':'Download vCard';
+}
+
+$('#langSelect').addEventListener('change', ()=>applyLang($('#langSelect').value));
+
+// vCard download
+$('#btnVcf').addEventListener('click', ()=>{
+  const vcf=`BEGIN:VCARD\nVERSION:3.0\nN:${CONTENT.name};;;;\nFN:${CONTENT.name}\nEMAIL;TYPE=INTERNET:${CONTENT.email}\nTEL;TYPE=CELL:${CONTENT.phone}\nURL:${CONTENT.site}\nORG:Freelance Translator\nTITLE:Translator & Interpreter\nEND:VCARD`;
+  const blob=new Blob([vcf],{type:'text/vcard'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=`${CONTENT.name.replace(/\s+/g,'_')}.vcf`;
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+});
+
+// QR code
+const qrUrl=`https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=${encodeURIComponent(location.href)}`;
+$('#qrImg').src=qrUrl; $('#qrImg').alt='QR code linking to this card';
+
+// initialize
+applyLang('en');
+</script>
 </body>
 </html>
